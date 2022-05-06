@@ -45,6 +45,17 @@ while True:
     for mention in mentions:
         print("found that bitch ")
         print (f "{mention.author.screen_name} said: {mention.text}")
+        mentions_id = mention.id
+        if mention.in_reply_to_status_id is None and mention.author.id != bot_id:
+            if True in [word in mention.text.lower() for word in words]:
+                try:
+                    print("Attempting to reply...")
+                    api.update_status(message.format(mention.author.screen_name), in_reply_to_status_id=mention.id_str)
+                    print("Successfully roasted that bitch :)")
+                except Exception as exc:
+                    print(exc)
+    time.sleep(15)
+    
         
 
 
