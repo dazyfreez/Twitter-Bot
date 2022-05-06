@@ -29,7 +29,7 @@ while True:
                 try:
                     print("Attempting to reply...")
                     api.update_status(message.format(mention.author.screen_name), in_reply_to_status_id=mention.id_str)
-                    print("Successfully replied :)")
+                    print("Successfully roasted :)")
                 except Exception as exc:
                     print(exc)
     time.sleep(15) 
