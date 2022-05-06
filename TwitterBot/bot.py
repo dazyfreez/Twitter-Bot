@@ -1,3 +1,4 @@
+from re import T
 import time
 import tweepy
 
@@ -15,9 +16,32 @@ api = tweepy.API(auth)
 bot_id= int(api.verify_credentials().id_str)
 mention_id = 1
 
-words = ["Why", "What", "How", "?", "When"]
+words = ["Why", "What", "How", "?", "You suck bitch"]
 message = "I think younare gay @{}"
+message = "why are you gay @{}"
+message = "lets go"
 
+while True:
+    mentions = api.mentions_timeline(since_id=mentions_id)  
+    for mention in mentions:
+        print("found that bitch ")
+        print (f "{mention.author.screen_name} said: {mention.text}")
+        print (f "mention id: {mention.id}")
+        print (f "mention id: {mention.id_str}")
+        print (f "mention id: {mention.created_at}")
+        print (f "mention id: {mention.in_reply_to_status_id}")
+        print (f "mention id: {mention.in_reply_to_status_id_str}")
+        print (f "mention id: {mention.in_reply_to_user_id}")
+        print (f "mention id: {mention.in_reply_to_user_id_str}")
+        print (f "mention id: {mention.in_reply_to_screen_name}")
+        print (f "mention id: {mention.source}")
+        print (f "mention id: {mention.truncated}")
+        print (f "mention id: {mention.favorited}")
+        print (f "mention id: {mention.coordinates}")
+        mention_id = mention.id 
+        if mention.in_reply_to_status_id_str == bot_id:
+            print("found that bitch ")
+            
 while True:
     mentions = api.mentions_timeline(since_id=mention_id) 
     for mention in mentions:
