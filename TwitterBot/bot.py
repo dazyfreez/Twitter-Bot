@@ -38,6 +38,8 @@ while True:
                 except Exception as exc:
                     print(exc)
     time.sleep(15) 
+    print("Sleeping...")
+    break
 
 
 while True:
@@ -55,7 +57,9 @@ while True:
                 except Exception as exc:
                     print(exc)
     time.sleep(15)
-    
+    print("Sleeping...")
+    break
+
         
 
 
