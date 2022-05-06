@@ -16,7 +16,7 @@ bot_id= int(api.verify_credentials().id_str)
 mention_id = 1
 
 words = ["Why", "What", "How", "?", "When"]
-message = "If you have any questions feel free to send us a DM @{}"
+message = "I think younare gay @{}"
 
 while True:
     mentions = api.mentions_timeline(since_id=mention_id) 
