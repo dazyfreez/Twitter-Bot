@@ -16,7 +16,7 @@ api = tweepy.API(auth)
 bot_id= int(api.verify_credentials().id_str)
 mention_id = 1
 
-words = ["Why", "What", "How", "?", "You suck bitch"]
+words = ["I think you gay", "lets go ", "Fortnite is better than Valorant", "Fortnite", "You suck bitch"]
 message = "I think younare gay @{}"
 message = "why are you gay @{}"
 message = "lets go"
@@ -34,12 +34,12 @@ while True:
                 try:
                     print("Attempting to reply...")
                     api.update_status(message.format(mention.author.screen_name), in_reply_to_status_id=mention.id_str)
-                    print("Successfully roasted :)")
+                    print("Successfully roasted that bitch :)")
                 except Exception as exc:
                     print(exc)
     time.sleep(15) 
 
-    
+
 while True:
     mentions = api.mentions_timeline(since_id=mentions_id)  
     for mention in mentions:
