@@ -20,6 +20,7 @@ words = ["I think you gay", "lets go ", "Fortnite is better than Valorant", "For
 message = "I think younare gay @{}"
 message = "why are you gay @{}"
 message = "lets go"
+message = "du Sohn einer frittierten Käsestange"
 
 
 
